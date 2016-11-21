@@ -1,0 +1,25 @@
+<scroll-view scroll-y="true" class="all-container">
+    <view class="tab"></view>
+    <block wx:for="{{ topicsList }}" wx:key = "id">
+        <view class="topic-item" data-id="{{ item.id }}" bindtap="go2Detail">
+
+            <view class="left"> 
+                <view class="{{ item.tagClass  + ' tag' }}">{{ item.tag }}</view>
+                <view class="avatar">
+                    <image src="{{ item.author.avatar_url }}" mode="aspectFill"></image>
+                </view>    
+            </view>
+            <view class="right">
+                <view class="top">
+                    {{ item.title}}
+                </view>
+                <view class="bottom">
+                    <view class="count">{{ item.reply_count }}/{{ item.visit_count }}</view>
+                    <view class="from-now">{{ item.last_reply_at }}</view>
+                </view>
+            </view>
+        <!--end topic-item-->
+        </view>
+    </block>
+    <view class="pagination"></view>
+</scroll-view>

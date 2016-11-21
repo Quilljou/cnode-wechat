@@ -1,0 +1,52 @@
+
+
+.detail {
+    background: #f0f0f0;
+    height: 100%;
+    padding: 20rpx 10rpx;
+    box-sizing: border-box;
+}
+
+.header {
+    box-sizing: border-box;
+    padding: 20rpx 20rpx 0 20rpx;
+    margin-bottom: 5rpx;
+    background: #fff;
+}
+
+.title {
+    font-size: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.meta {
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    color: #888;
+    font-size: 30rpx;
+}
+
+.name {
+    margin: 0 30rpx 0 10rpx;
+}
+
+.avatar {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50rpx;
+}
+
+.ask {
+    background: #f0f0f0;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+
+.question {
+    background: #fff;
+    padding: 20rpx;
+    color: #111;
+    font-size: 35rpx;
+    line-height: 42rpx; 
+}

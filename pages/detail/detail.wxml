@@ -1,0 +1,19 @@
+<scroll-view class="detail">
+    <view class="ask">
+        <view class="header"> 
+            <view class="title">
+                <text>{{ detail.title }}</text>
+            </view>
+            <view class="meta">
+                <image src="{{detail.author.avatar_url}}" class="avatar"></image>
+                
+                <text class="name">{{detail.author.loginname}}</text>
+
+                <text>发布于 {{detail.create_at}}</text>
+            </view>
+        </view>
+        <view class="question">
+            {{ detail.content }}
+        </view>
+    </view>
+</scroll-view>
