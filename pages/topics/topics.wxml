@@ -1,5 +1,11 @@
-<scroll-view scroll-y="true" class="all-container">
-    <view class="tab"></view>
+<view class="tab">
+    <view class="{{ tabClass + ' tab-item-selected' }}" id="all" catchtap="changeTab">全部</view>
+    <view class="{{ tabClass }}" id="good" catchtap="changeTab">精华</view>
+    <view class="{{ tabClass }}" id="share" catchtap="changeTab">分享</view>
+    <view class="{{ tabClass }}" id="ask" catchtap="changeTab">问答</view>
+    <view class="{{ tabClass }}" id="job" catchtap="changeTab">招聘</view>
+</view>
+<scroll-view scroll-y="true" class="container">
     <block wx:for="{{ topicsList }}" wx:key = "id">
         <view class="topic-item" data-id="{{ item.id }}" bindtap="go2Detail">
 
@@ -21,5 +27,8 @@
         <!--end topic-item-->
         </view>
     </block>
-    <view class="pagination"></view>
+    <view class="pagination">
+        <view data-page="{{ topicsList[0].page - 1 }}" catchtap="changePage">Prev</view>
+        <view data-page="{{ topicsList[0].page + 1 }}" catchtap="changePage">Next</view>
+    </view>
 </scroll-view>

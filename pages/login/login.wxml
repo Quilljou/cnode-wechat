@@ -1,0 +1,8 @@
+<view class="form-container">
+    <form bindsubmit="requestLogin">
+        <label>Access-token:</label>
+        <input name="accesstoken" placeholder="在cnode.org中获得你的token" type="text" placeholder-style="font-size: 25rpx;" auto-focus="true"/>
+        <button formType="submit" type="primary">提交</button>
+    </form>
+
+</view>

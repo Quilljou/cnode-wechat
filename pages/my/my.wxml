@@ -1,0 +1,45 @@
+<view class="avatar">
+    <!--<image src="{{ user.avatar_url || 'http://www.fillmurray.com/100/100' }}" class="flur"></image>-->
+    <image src="{{ user.avatar_url || 'http://www.fillmurray.com/100/100' }}" class="avatar-img"></image>
+    <view class="username" data-islogin="{{ isLogin }}" catchtap="go2Login">
+        <text hidden="{{ isLogin }}" >未登录</text>
+        <text hidden="{{ !isLogin }}" >{{ user.loginname }}</text>
+    </view>
+</view>
+<view class="recent">
+    <view class="recent-replies recent-item" >
+        <view class="title">最近回复的主题</view>
+        <view hidden="{{ !!user.recent_replies }}" class="hidden-info">没有最近回复的主题哦</view>
+        <view wx:for="{{user.recent_replies}}" class="reply-item">
+            <view class="left">
+                <image src="{{item.author.avatar_url}}" class="avatar-img-recent"></image>
+                <text class="author-name">
+                    {{item.author.loginname}}
+                </text>
+            </view>
+            <view class="right">
+                <view data-id="{{ item.id }}" catchtap="go2Detail"> 
+                    {{item.title}}
+                </view>
+                <view class="timeago">
+                    {{item.last_reply_at}}
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="recent-replies recent-item" >
+        <view class="title">最近创建的主题</view>
+        <view hidden="{{ user.recent_topics.length > 0 ? true : false }}" class="hidden-info">没有最近创建的主题哦</view>
+        <view wx:for="{{user.recent_topics}}">
+            {{item.title}}
+            {{item.author.avatar_url}}
+            {{item.author.loginname}}
+            {{item.last_reply_at}}
+        </view>
+        
+        </view> 
+</view>
+<view class="logout" hidden="{{ !isLogin }}">
+    <button type="warn" catchtap="logout">退出登录</button>
+</view>

@@ -1,0 +1,92 @@
+.avatar {
+  height: 320rpx;
+  background: linear-gradient(-45deg,#ccc,#888);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+.flur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+}
+.avatar-img {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+}
+
+.username text {
+  color: #fff;
+}
+.recent {
+  background: #F6F6F6;
+  margin: 20rpx;
+  padding: 1rpx;
+}
+.recent-item {
+  padding: 0 10rpx;
+  min-height: 200rpx;
+  margin-bottom: 30rpx;
+}
+
+.reply-item {
+  background: #fff;
+  margin-bottom: 10rpx; 
+  display: flex;
+  /*align-items: center;*/
+  padding: 20rpx 10rpx;
+}
+.author-name {
+  font-size: 30rpx;
+  color: #777;
+  word-wrap: wrap;
+  width: 100rpx;
+}
+
+.left {
+  margin-right: 15rpx;
+  width: 100rpx;
+}
+.avatar-img-recent {
+  width: 100rpx;
+  height: 100rpx;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.timeago {
+  font-size: 30rpx;
+  color: #777;
+  text-align: right
+  
+  
+}
+.title {
+  color: #9C9999;
+  font-size: 34rpx;
+  margin: 15rpx  3rpx;
+}
+
+.logout {
+  margin-top: 40rpx;
+  padding: 0 30rpx;
+}
+.hidden-info {
+  display: flex;
+  height: 200rpx;
+  color: #bbb;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}

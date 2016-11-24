@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/topics/topics",
-    "pages/logs/logs",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/my/my",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#008BAC",
+    "navigationBarBackgroundColor": "#00AE33",
     "navigationBarTitleText": "Cnode.org",
     "navigationBarTextStyle":"whtie",
     "backgroundColor": "#233"
@@ -22,7 +23,7 @@
       "iconPath": "assets/img/tabBar/newspaper.png",
       "selectedIconPath": "assets/img/tabBar/newspaper-selected.png"
     },{
-      "pagePath": "pages/logs/logs",
+      "pagePath": "pages/my/my",
       "text": "我的",
       "iconPath": "assets/img/tabBar/user.png",
       "selectedIconPath": "assets/img/tabBar/user-selected.png"

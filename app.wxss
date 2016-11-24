@@ -1,8 +1,4 @@
 /**app.wxss**/
-*{
-  box-sizing: border-box;
-}
-
 
 .container {
   height: 100%;
