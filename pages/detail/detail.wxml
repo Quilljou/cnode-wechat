@@ -16,4 +16,28 @@
             {{ detail.content }}
         </view>
     </view>
+    <view class="reply">
+        <view class="reply-header">评论</view>
+        <block wx:for="{{ detail.replies }}">
+            <view class="reply-item">
+
+                <view class="reply-content">
+                    <text>
+                        {{ item.content }}
+                    </text>
+                </view>
+                <view class="reply-meta">
+                    <view class="reply-author">
+                        <image src="{{ item.author.avatar_url }}"></image>
+                        <text class="reply-author-name">
+                            {{ item.author.loginname }}
+                        </text>    
+                    </view>
+                    <view>
+                        {{ item.create_at }}
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
 </scroll-view>

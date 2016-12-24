@@ -31,11 +31,21 @@
     <view class="recent-replies recent-item" >
         <view class="title">最近创建的主题</view>
         <view hidden="{{ user.recent_topics.length > 0 ? true : false }}" class="hidden-info">没有最近创建的主题哦</view>
-        <view wx:for="{{user.recent_topics}}">
-            {{item.title}}
-            {{item.author.avatar_url}}
-            {{item.author.loginname}}
-            {{item.last_reply_at}}
+        <view wx:for="{{user.recent_topics}}" class="reply-item">
+            <view class="left">
+                <image src="{{item.author.avatar_url}}" class="avatar-img-recent"></image>
+                <text class="author-name">
+                    {{item.author.loginname}}
+                </text>
+            </view>
+            <view class="right">
+                <view data-id="{{ item.id }}" catchtap="go2Detail"> 
+                    {{item.title}}
+                </view>
+                <view class="timeago">
+                    {{item.last_reply_at}}
+                </view>
+            </view>
         </view>
         
         </view> 

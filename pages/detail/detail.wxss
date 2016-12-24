@@ -22,9 +22,10 @@
 .meta {
     height: 80rpx;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     color: #888;
     font-size: 30rpx;
+    padding-bottom: 10rpx;
 }
 
 .name {
@@ -39,7 +40,7 @@
 
 .ask {
     background: #f0f0f0;
-    border-radius: 15rpx;
+    border-radius: 15rpx 15rpx 0 0;
     overflow: hidden;
 }
 
@@ -49,4 +50,45 @@
     color: #111;
     font-size: 35rpx;
     line-height: 42rpx; 
+}
+.reply {
+    background: #fff;
+    margin-top: 30rpx;
+    padding: 20rpx 10rpx; 
+    border-radius: 0 0 15rpx 15rpx;
+}
+
+.reply-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10rpx;
+}
+.reply-header {
+    border-bottom: 1px solid #ccc;
+    padding: 10rpx 0;
+}
+
+.reply-meta image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    margin-right: 15rpx;
+}
+
+.reply-author {
+    display: flex;
+    align-items: flex-end;
+}
+.reply-content text {
+    text-indent: 40rpx;
+    color: #333;
+    font-size: 30rpx;
+}
+
+.reply-meta {
+    margin-top: 20rpx;
+    display: flex;
+    font-size: 25rpx;
+    color: #888;
+    justify-content: space-between;
+    align-items: flex-end;
 }

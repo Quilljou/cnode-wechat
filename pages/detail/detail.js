@@ -38,8 +38,19 @@ Page({
         })
     },
     cook: function(data){
+        var self = this;
         data.create_at = this.timeAgo(data.create_at);
+        data.replies.map(function(reply,index){
+            data.replies[index].create_at = self.timeAgo(reply.create_at);
+        })
+        console.log(data)
         return data;
     },
-    timeAgo: Util.timeAgo
+    timeAgo: Util.timeAgo,
+    onShareAppMessage: function () {
+    return {
+      title: '分享',
+      path: '/page/topics/topics'
+    }
+  }
 })
